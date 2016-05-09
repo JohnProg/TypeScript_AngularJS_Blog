@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <title> First Demo</title>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"
+    </head>
+    <body ng-app="demoModule">
+        <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <div class="navbar-brand">Demo v1.0</div>
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#/inicio">Inicio</a></li>
+                            <li><a href="#/products">Productos</a></li>
+                            <li><a href="#/acerca">acerca</a></li>
+                        </ul>    
+                    </div>
+                </div>
+            </nav>
+        <div class="container">
+            <div class="row">
+                <ng-view></ng-view>
+            </div>
+            
+        </div>
+       <!-- Library Scripts -->
+       <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+       <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+       <script src="/scripts/angular.js"></script>
+       <script src="scripts/angular-resource.js"></script>
+       <script src="/scripts/angular-route.js"></script>
+       <!-- Application Script -->
+       <script src="/app/app.js"></script>
+       <!-- Domain Classes -->
+       <script src="/app/domains/product.js"></script>
+       <!-- Services -->
+       <script src="/app/services/common.services.js"></script>
+       <script src="/app/services/dataProductServices.js"></script>
+       <script src="/app/factories/dataProductFactory.js"></script>
+       <!-- Controllers -->
+        <script src="app/controllers/ProductListController.js"></script>
+         <!--Directives-->
+        <script src="/app/directives/ProgressBarDirective.js"></script>
+    </body>
+</html>
