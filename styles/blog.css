@@ -1,29 +1,4 @@
-/*************** labels of css section ***************
-*************** BlogDesk blog theme 1.0v 
-default settings
-theme btns
-preloader
-Parallax settings
-forms inputs
-Back to top btn
-navbar
-banner
-section default
-features
-Parallax
-about
-gallery
-Team
-pricing
-social icons
-contact
-footer
-media responsive
-********************/
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
-@import url('../plugins/font-awesome/css/font-awesome.min.css');
-@import url('../plugins/owl-carousel/owl.carousel.css');
-@import url('../plugins/owl-carousel/owl.theme.css');
 /***************default settings********************/
 body { font-family: 'Roboto', sans-serif; background: #f4f4f4; padding-top: 60px;}
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: 'Roboto', sans-serif; }

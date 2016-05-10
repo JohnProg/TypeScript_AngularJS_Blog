@@ -19,9 +19,30 @@ var moduleFirstDemo;
                 return response.data;
             });
         };
+        DataPostFactory.prototype.updatePost = function (post) {
+            return this.$http
+                .put('http://104.131.28.224:3000/posts/' + post.postId, post)
+                .then(function (response) {
+                return response.data;
+            });
+        };
         DataPostFactory.prototype.getPost = function (id) {
             return this.$http
                 .get('http://104.131.28.224:3000/posts/' + id)
+                .then(function (response) {
+                return response.data;
+            });
+        };
+        DataPostFactory.prototype.getComments = function (postId) {
+            return this.$http
+                .get('http://104.131.28.224:3000/comments/?postId=' + postId)
+                .then(function (response) {
+                return response.data;
+            });
+        };
+        DataPostFactory.prototype.saveComment = function (comment) {
+            return this.$http
+                .post('http://104.131.28.224:3000/comments/', comment)
                 .then(function (response) {
                 return response.data;
             });

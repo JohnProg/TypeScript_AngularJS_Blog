@@ -4,7 +4,6 @@ namespace moduleFirstDemo {
         title:string;
         showImage:boolean;
         posts:moduleFirstDemo.domain.IPost[];
-        toggleImage():void;
         currentPost: moduleFirstDemo.domain.IPost;
         savePost():void;
     }
@@ -32,19 +31,12 @@ namespace moduleFirstDemo {
             );
             }, 0);
         }
-        toggleImage():void{
-            this.showImage=!this.showImage;
-        }
         savePost(): void {
-            
             this.currentPost.publishDate = new Date();
             this.currentPost.author = "John"; // TODO: should load from session :v
             this.currentPost.likes = 0;
             
             this.DataPostFactory.savePost(this.currentPost).then(res => {
-                console.log('GRABE CHORRI');
-                console.log(res);
-                
                 this.$location.path('/posts');
             });
         }

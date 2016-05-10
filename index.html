@@ -17,10 +17,7 @@
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 
-  <!--[if lt IE 9]>
-
-
-        <![endif]-->
+  <!--[if lt IE 9]> <![endif]-->
 
 </head>
 
@@ -32,49 +29,7 @@
     <div class="container">
       <h2 class="heading">Posts</h2>
       <div class="row">
-        <div class="col-md-8 col-lg-8">
-          <ng-view></ng-view>
-          <div class="clearfix"></div>
-        </div>
-        <aside class="col-md-4 col-lg-4">
-          <div class="row">
-            <div class="col-sm-6 col-md-12 col-lg-12">
-              <div class="panel panel-default theme-panel">
-                <div class="panel-heading">Search Post</div>
-                <div class="panel-body">
-                  <form action="" method="">
-                    <div class="input-group">
-                      <input type="text" class="form-control" ng-model="name" placeholder="Search for...">
-                      <span class="input-group-btn">
-                    <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
-                    </span> </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-12 col-lg-12">
-              <div class="panel panel-default theme-panel">
-                <div class="panel-heading">Tags</div>
-                <div class="panel-body">
-                  <ul class="list-inline tags">
-                    <li><a href="">LifeStyle</a></li>
-                    <li class="big"><a href="">Music</a></li>
-                    <li><a href="">SmartPhones</a></li>
-                    <li><a href="">Business</a></li>
-                    <li><a href="">Travel</a></li>
-                    <li class="big"><a href="">Business</a></li>
-                    <li class="small"><a href="">LifeStyle</a></li>
-                    <li><a href="">SmartPhones</a></li>
-                    <li><a href="">Fireworks</a></li>
-                    <li class="big"><a href="">Travel</a></li>
-                    <li><a href="">Fireworks</a></li>
-                    <li class="small"><a href="">Music</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </aside>
+        <ng-view></ng-view>        
       </div>
     </div>
   </section>
@@ -82,8 +37,8 @@
   <!-- Footer-->
   <ng-include src="'app/views/partials/footer.html'"></ng-include>
   <!-- Library Scripts -->
-  <script src="node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
   <script src="/scripts/angular.js"></script>
   <script src="scripts/angular-resource.js"></script>
   <script src="/scripts/angular-route.js"></script>

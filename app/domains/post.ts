@@ -4,19 +4,20 @@ namespace moduleFirstDemo.domain {
         postName: string;
         postDescription: string;
         publishDate: Date;
-        likes: Number;
+        likes: number;
         author: string;
         imageUrl: string;
+        comments: any[];
     }
     export class Post implements IPost {
         constructor(public postId: number,
                     public postName: string,
                     public postDescription: string,
                     public publishDate: Date,
-                    public likes: Number,
+                    public likes: number,
                     public author: string,
-                    public imageUrl: string){
-            
+                    public imageUrl: string,
+                    public comments: any[]){            
         }
         
     }

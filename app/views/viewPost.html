@@ -1,61 +1,304 @@
-<div class="container">
-    <div class="row">
-
-        <div class="col-md-8 col-lg-8">
-            <article class="post">
-                <div class="post-type post-img">
-                    <a href="#"><img ng-src="{{ vm.post.imageUrl }}" class="img-responsive" alt="image post"></a>
-                </div>
-                <div class="author-info">
-                    <ul class="list-inline">
-                        <li>
-                            <div class="icon-box">
-                                <img ng-src="{{ vm.post.imageUrl }}" class="img-responsive" alt="image post">
-                            </div>
-                            <div class="info">
-                                <p>Posted by:</p>
-                                <a href="">{{ vm.post.author}}</a> </div>
-                        </li>
-                        <li>
-                            <div class="icon-box"><i class="fa fa-calendar"></i></div>
-                            <div class="info">
-                                <p>Posted on:</p>
-                                <strong>{{ vm.post.publishDate | date }}</strong></div>
-                        </li>
-                        <li>
-                            <div class="icon-box"><i class="fa fa-comments-o"></i></div>
-                            <div class="info">
-                                <p>Comments:</p>
-                                <strong>127</strong></div>
-                        </li>
-                        <li>
-                            <div class="icon-box"><i class="fa fa-eye"></i></div>
-                            <div class="info">
-                                <p>Total View:</p>
-                                <strong>4289</strong></div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="caption">
-                    <h3>{{ vm.post.postName }}</h3>
-                    <p> {{ vm.post.postDescription }}</p>
-                    <div class="post-category"> 
-                        <a href="#"><span>&nbsp;</span> Market Research</a>
-                    </div>
-                    <ul class="list-inline tags">
-                        <li><a href="#">Photography</a></li>
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">Marketing</a></li>
-                        <li><a href="#">Business</a></li>
-                        <li><a href="#">Photoshop</a></li>
-                        <li><a href="#">LifeStyle</a></li>
-                    </ul>
-                    <a  class="btn btn-default btn-lg"
-                        href="#/posts" 
-                        role="button">Back</a> 
-                </div>
-            </article>
-            <div class="clearfix"></div>
+<div class="col-md-9 col-lg-9">
+    <a class="btn btn-default pull-left btn-lg"
+               href="#/posts"
+               role="button">Back</a>        
+    <article class="post">        
+        <div class="post-type post-img">
+            <a href="#"><img ng-src="{{ vm.post.imageUrl }}" class="img-responsive" alt="image post"></a>
         </div>
-    </div>
+        <div class="author-info">
+            <ul class="list-inline">
+                <li>
+                    <div class="icon-box">
+                        <img ng-src="{{ vm.post.imageUrl }}" class="img-responsive" alt="image post">
+                    </div>
+                    <div class="info">
+                        <p>Posted by:</p>
+                        <a href="">{{ vm.post.author}}</a></div>
+                </li>
+                <li>
+                    <div class="icon-box"><i class="fa fa-calendar"></i></div>
+                    <div class="info">
+                        <p>Posted on:</p>
+                        <strong>{{ vm.post.publishDate | date }}</strong>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon-box"><i class="fa fa-comments-o"></i></div>
+                    <div class="info">
+                        <p>Comments:</p>
+                        <strong>127</strong>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon-box"><i class="fa fa-eye"></i></div>
+                    <div class="info">
+                        <p>Total View:</p>
+                        <strong>4289</strong>
+                    </div>
+                </li>
+                <li>
+                    <button class="icon-box"
+                            ng-click="vm.addNewLike()">
+                        <i class="fa fa-thumbs-o-up"></i></button>
+                    <div class="info">
+                        <p>Likes:</p>
+                        <strong>{{ vm.post.likes }}</strong>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="caption">
+            <h3>{{ vm.post.postName }}</h3>
+
+            <p> {{ vm.post.postDescription }}</p>
+
+            <div class="post-category">
+                <a href="#"><span>&nbsp;</span> Market Research</a>
+            </div>
+            <ul class="list-inline tags">
+                <li><a href="#">Photography</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Marketing</a></li>
+                <li><a href="#">Business</a></li>
+                <li><a href="#">Photoshop</a></li>
+                <li><a href="#">LifeStyle</a></li>
+            </ul>                        
+        </div>
+        <div class="share-this">
+                <div class="row">
+                    <div class="col-xs-5 col-sm-4 col-md-5 col-lg-4"><p>Share this post with:</p></div>
+                    <div class="col-xs-7 col-sm-8 col-md-7 col-lg-8 nopadding">
+                        <ul class="list-inline">
+                            <li><a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a></li>
+
+                            <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+
+                            <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--<div class="related-post">
+
+                <div class="row">
+
+                    <div class="col-md-12"><h4>Related Topics</h4></div>
+
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+
+                        <div class="thumbnail">
+
+                            <a href="#"><img src="assets/images/post/related-post1.png" alt="related post"></a>
+
+                            <div class="caption">
+
+                                <a href="#">Cras sit amet nibh libero, in gravida nulla</a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+
+                        <div class="thumbnail">
+
+                            <a href="#"><img src="assets/images/post/related-post2.png" alt="related post"></a>
+
+                            <div class="caption">
+
+                                <a href="#">Cras sit amet nibh libero, in gravida nulla</a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+
+                        <div class="thumbnail">
+
+                            <a href="#"><img src="assets/images/post/related-post3.png" alt="related post"></a>
+
+                            <div class="caption">
+
+                                <a href="#">Cras sit amet nibh libero, in gravida nulla</a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>-->
+
+            <div class="comment-count">
+
+                <h4>{{ vm.post.comments.length }} Comments</h4>
+
+                <!--<p><a href="#">Sign in</a> to comment or comment as a guest.</p>-->
+
+            </div>
+
+            <div class="comment-list"
+                ng-if="vm.post.comments.length > 0">
+                <div class="media"
+                     ng-repeat="comment in vm.post.comments">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" 
+                                 width="50"
+                                 src="https://pbs.twimg.com/profile_images/508939035608240128/R3HA9-2J.jpeg" 
+                                 alt="placeholder image">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <p>{{ comment.body }}</p>
+                        <ul class="list-inline">
+                            <li><a class="media-heading" href="#">{{ comment.author }}</a></li>
+                            <li>{{ comment.createdOn | date }} hours ago</li>
+                            <!--<li><a class="reply-btn" href="#">Post Reply</a></li>-->
+                        </ul>
+                    </div>
+                </div>
+               <!-- <div class="media">
+
+                    <div class="media-left">
+
+                        <a href="#">
+
+                            <img class="media-object" src="assets/images/comment-thumbnail.png" alt="placeholder image">
+
+                        </a>
+
+                    </div>
+
+                    <div class="media-body">
+
+
+                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin
+                            commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. </p>
+
+                        <ul class="list-inline">
+
+                            <li><a class="media-heading" href="#">Anonymous</a></li>
+
+                            <li>3 hours ago</li>
+
+                            <li><a class="reply-btn" href="#">Post Reply</a></li>
+
+                        </ul>
+
+                        <div class="media nested-first">
+
+                            <div class="media-left">
+
+                                <a href="#">
+
+                                    <img class="media-object" src="assets/images/comment-thumbnail.png"
+                                        alt="placeholder image">
+
+                                </a>
+
+                            </div>
+
+                            <div class="media-body">
+
+
+                                <p> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
+                                    sollicitudin commodo.</p>
+
+                                <ul class="list-inline">
+
+                                    <li><a class="media-heading" href="#">Anonymous</a></li>
+
+                                    <li>3 hours ago</li>
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                        <div class="media">
+
+                            <div class="media-left">
+
+                                <a href="#">
+
+                                    <img class="media-object" src="assets/images/comment-thumbnail.png"
+                                        alt="placeholder image">
+
+                                </a>
+
+                            </div>
+
+                            <div class="media-body">
+
+                                <p> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
+                                    sollicitudin commodo.</p>
+
+                                <ul class="list-inline">
+
+                                    <li><a class="media-heading" href="#">Anonymous</a></li>
+
+                                    <li>3 hours ago</li>
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>-->
+
+            </div>
+
+            <div class="comment-form">
+                <h4>Make a comment</h4>
+                <form role="form" 
+                      name="commentForm"
+                      id="commentForm">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-5">
+                            <div class="form-group">
+                                <input type="text" 
+                                       class="form-control" 
+                                       name="author" 
+                                       autofocus
+                                       ng-model="vm.comment.author"
+                                       autocomplete="off"
+                                       placeholder="Full Name:">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+
+                        <textarea class="form-control" 
+                                 name="message" 
+                                 ng-model="vm.comment.body"
+                                 placeholder="Message:" 
+                                 rows="3"></textarea>
+                    </div>
+
+                    <button type="button" 
+                            ng-click="vm.saveComment()"
+                            ng-disabled="commentForm.$invalid" 
+                            class="btn btn-default btn-lg">Save</button>
+
+                </form>
+
+            </div>            
+    </article>
+    <div class="clearfix"></div>
 </div>
+
+

@@ -3,7 +3,7 @@ var moduleFirstDemo;
     var domain;
     (function (domain) {
         var Post = (function () {
-            function Post(postId, postName, postDescription, publishDate, likes, author, imageUrl) {
+            function Post(postId, postName, postDescription, publishDate, likes, author, imageUrl, comments) {
                 this.postId = postId;
                 this.postName = postName;
                 this.postDescription = postDescription;
@@ -11,6 +11,7 @@ var moduleFirstDemo;
                 this.likes = likes;
                 this.author = author;
                 this.imageUrl = imageUrl;
+                this.comments = comments;
             }
             return Post;
         }());
