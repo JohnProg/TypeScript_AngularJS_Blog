@@ -1,38 +1,44 @@
- <a href="#/posts/new" class="btn btn-default pull-right" >New Post</a> 
-
-<article class="post vt-post" ng-repeat="post in vm.posts | filter: name">
-          <div class="row">
-            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-4">
-              <div class="post-type post-img"> <a href=""><img ng-src="{{ post.imageUrl }}" class="img-responsive" alt="image post"></a> </div>
-              <div class="author-info author-info-2">
-                <ul class="list-inline">
-                  <li>
-                    <div class="info">
-                      <p>Posted on:</p>
-                      <strong>{{ post.publishDate | date }}</strong></div>
-                  </li>
-                  <li>
-                    <div class="info">
-                      <p>Comments:</p>
-                      <strong>127</strong></div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-7 col-md-7 col-lg-8">
-              <div class="caption">
-                <h3 class="md-heading"><a href="">{{ post.postName }}</a></h3>
-                <p> {{ post.postDescription }}</p>
-                <a class="btn btn-default" href="" role="button">Read More</a> </div>
-            </div>
-          </div>
-        </article>
-        <div class="pagination-wrap">
-          <ul class="pagination">
-            <li> <a href="" aria-label="Previous"> <span aria-hidden="true">Previous</span> </a> </li>
-            <li><a href="">1</a></li>
-            <li><a href="">2</a></li>
-            <li><a href="">...</a></li>
-            <li class="active"> <a href="" aria-label="Next"> <span aria-hidden="true">Next</span> </a> </li>
-          </ul>
-        </div>
+ <a href="#/posts/new" 
+    class="btn btn-default pull-right" >New Post</a> 
+<br>
+<br>
+<br>
+<article class="post vt-post"   
+         ng-repeat="post in vm.posts | filter: name">
+  <div class="row">
+    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-4">
+      <div class="post-type post-img">
+          <a href=""><img ng-src="{{ post.imageUrl }}" class="img-responsive" alt="image post"></a>
+      </div>
+      <div class="author-info author-info-2">
+        <ul class="list-inline">
+          <li>
+            <div class="info">
+              <p>Posted on:</p>
+              <strong>{{ post.publishDate | date }}</strong></div>
+          </li>
+          <li>
+            <div class="info">
+              <p>Comments:</p>
+              <strong>127</strong></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-8">
+      <div class="caption">
+        <h3 class="md-heading"><a href="">{{ post.postName }}</a></h3>
+        <p> {{ post.postDescription | limitTo:300 }}</p>
+        <a class="btn btn-default" href="{{ '#/posts/' + post.id }}" role="button">Read More</a> </div>
+    </div>
+  </div>
+</article>
+<div class="pagination-wrap">
+  <ul class="pagination">
+    <li> <a href="" aria-label="Previous"> <span aria-hidden="true">Previous</span> </a> </li>
+    <li><a href="">1</a></li>
+    <li><a href="">2</a></li>
+    <li><a href="">...</a></li>
+    <li class="active"> <a href="" aria-label="Next"> <span aria-hidden="true">Next</span> </a> </li>
+  </ul>
+</div>

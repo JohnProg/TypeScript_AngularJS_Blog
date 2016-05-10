@@ -12,7 +12,7 @@ namespace moduleFirstDemo.common {
         static $inject: Array<string> = ['$resource'];
         constructor(private $resource: ng.resource.IResourceService) {}
         getPostResource(): ng.resource.IResourceClass<IPostResource> {
-			return this.$resource("http://192.168.0.149:3000/posts/:id");
+			return this.$resource("http://104.131.28.224:3000/posts/:id");
 		}
     }
 

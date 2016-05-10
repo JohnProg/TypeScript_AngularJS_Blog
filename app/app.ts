@@ -4,9 +4,7 @@ namespace moduleFirstDemo{
     demoModule.config(demoRouteConfig);
     function demoRouteConfig($routeProvider:ng.route.IRouteProvider):void{
         
-        $routeProvider.when('/inicio',{
-            templateUrl:'app/views/inicio.html'
-        }).when('/posts',{
+        $routeProvider.when('/',{
             templateUrl:'app/views/postList.html',
             controller:'PostListController',
             controllerAs:'vm'
@@ -14,9 +12,13 @@ namespace moduleFirstDemo{
             templateUrl:'app/views/newPost.html',
             controller:'PostListController',
             controllerAs:'vm'
+        }).when('/posts/:id',{
+            templateUrl:'app/views/viewPost.html',
+            controller:'PostViewController',
+            controllerAs:'vm'
         }).when('/acerca',{
             templateUrl:'app/views/acerca.html'
-        }).otherwise('/inicio');
+        }).otherwise('/');
         
     }
     

@@ -37,6 +37,10 @@ namespace moduleFirstDemo {
         }
         savePost(): void {
             
+            this.currentPost.publishDate = new Date();
+            this.currentPost.author = "John"; // TODO: should load from session :v
+            this.currentPost.likes = 0;
+            
             this.DataPostFactory.savePost(this.currentPost).then(res => {
                 console.log('GRABE CHORRI');
                 console.log(res);
