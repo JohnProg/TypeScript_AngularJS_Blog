@@ -5,19 +5,20 @@ namespace moduleFirstDemo {
         showImage:boolean;
         posts:moduleFirstDemo.domain.IPost[];
         toggleImage():void;
-        currentPost: Object;
+        currentPost: moduleFirstDemo.domain.IPost;
+        savePost():void;
     }
     export class PostListController implements IPostListController{
-       static $inject: Array<string> = ['DataPostService','DataPostFactory'];
+       static $inject: Array<string> = ['DataPostService','DataPostFactory','$location'];
         //constructor(private dependency1: dependency1Type) {}
         title:string;
         showImage:boolean;
         posts:moduleFirstDemo.domain.IPost[];
-        currentPost: Object;
+        currentPost: moduleFirstDemo.domain.IPost;
         showProgress:boolean;
         
         constructor(private DataPostService: moduleFirstDemo.common.IDataPostService,
-        private DataPostFactory: moduleFirstDemo.IDataPostFactory){
+        private DataPostFactory: moduleFirstDemo.IDataPostFactory, private $location: ng.ILocationService){
             this.title="Product list";
             this.showImage=false;
             this.posts=[];
@@ -33,6 +34,15 @@ namespace moduleFirstDemo {
         }
         toggleImage():void{
             this.showImage=!this.showImage;
+        }
+        savePost(): void {
+            
+            this.DataPostFactory.savePost(this.currentPost).then(res => {
+                console.log('GRABE CHORRI');
+                console.log(res);
+                
+                this.$location.path('/posts');
+            });
         }
     }
 

@@ -10,6 +10,10 @@ namespace moduleFirstDemo{
             templateUrl:'app/views/postList.html',
             controller:'PostListController',
             controllerAs:'vm'
+        }).when('/posts/new',{
+            templateUrl:'app/views/newPost.html',
+            controller:'PostListController',
+            controllerAs:'vm'
         }).when('/acerca',{
             templateUrl:'app/views/acerca.html'
         }).otherwise('/inicio');

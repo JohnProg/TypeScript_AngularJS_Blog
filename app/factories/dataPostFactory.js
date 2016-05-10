@@ -12,6 +12,13 @@ var moduleFirstDemo;
                 return response.data;
             });
         };
+        DataPostFactory.prototype.savePost = function (post) {
+            return this.$http
+                .post('http://192.168.0.149:3000/posts/', post)
+                .then(function (response) {
+                return response.data;
+            });
+        };
         DataPostFactory.$inject = ['$http'];
         return DataPostFactory;
     }());
