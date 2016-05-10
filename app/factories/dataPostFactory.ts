@@ -10,7 +10,7 @@ namespace moduleFirstDemo {
         
          getPosts(): ng.IPromise<moduleFirstDemo.domain.IPost[]> {
             return this.$http
-                    .get('http://192.168.0.149:3000/products/')
+                    .get('http://192.168.0.149:3000/posts/')
                     .then((response: ng.IHttpPromiseCallbackArg<moduleFirstDemo.domain.IPost[]>): moduleFirstDemo.domain.IPost[]=> {
                             return <moduleFirstDemo.domain.IPost[]>response.data;
                 });

@@ -16,7 +16,7 @@
                         {{vm.showImage ? "Hide" : "Show"}} Image
                     </button>
                 </td>
-                <td>Product</td>
+                <td>POst</td>
                 <td>Code</td>
                 <td>Available</td>
                 <td>Price</td>
@@ -38,7 +38,7 @@
                 <td><button class="btn btn-success"
                             data-toggle="modal" 
                             data-target="#myModal"
-                            ng-click="vm.currentPost = product">detalle</button></td>
+                            ng-click="vm.currentPost = post">detalle</button></td>
             </tr>
             </tbody>
         </table>
@@ -49,7 +49,7 @@
         <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Producto</h4>
+            <h4 class="modal-title" id="myModalLabel">posto</h4>
         </div>
         <div class="modal-body">
             <div class="row">
@@ -58,8 +58,8 @@
                         ng-src="{{ vm.currentPost.imageUrl}}" alt="">
                 </div>
                 <div class="col-sm-8">
-                    <p><b>Name: </b>{{ vm.currentPost.productName }}</p>
-                    <p><b>Code: </b>{{ vm.currentPost.productCode }}</p>
+                    <p><b>Name: </b>{{ vm.currentPost.postName }}</p>
+                    <p><b>Code: </b>{{ vm.currentPost.postCode }}</p>
                     <p><b>Price: </b>: {{ vm.currentPost.price }}</p>
                 </div>
             </div>
