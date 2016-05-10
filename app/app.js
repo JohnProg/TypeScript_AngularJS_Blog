@@ -14,6 +14,10 @@ var moduleFirstDemo;
             templateUrl: 'app/views/newPost.html',
             controller: 'PostListController',
             controllerAs: 'vm'
+        }).when('/posts/:id', {
+            templateUrl: 'app/views/viewPost.html',
+            controller: 'PostViewController',
+            controllerAs: 'vm'
         }).when('/acerca', {
             templateUrl: 'app/views/acerca.html'
         }).otherwise('/inicio');

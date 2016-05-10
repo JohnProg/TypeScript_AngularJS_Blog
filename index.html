@@ -1,184 +1,194 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="author" content="">
-<link rel="icon" href="/assets/icon/favicon.ico">
-<title>Blog Typescript | Home one</title>
+<html lang="en">
 
-<!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
-<link rel="stylesheet" href="styles/blog.css" type="text/css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="/assets/icon/favicon.ico">
+  <title>Blog Typescript | Home one</title>
 
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="styles/blog.css" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 
-<!--[if lt IE 9]>
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+  <!--[if lt IE 9]>
 
 
         <![endif]-->
 
 </head>
+
 <body style="overflow: visible;" ng-app="demoModule">
-                
-<header> 
-  
-  <!-- TODO: make directive -->
-  
-  <div id="preloader" style="display: none;">
-    <div id="status" style="display: none;">
-      <div class="spinner-wrap">
-        <div class="leftside"></div>
-        <div class="rightside"></div>
-        <div class="spinner">
-          <div class="bounce1"></div>
-          <div class="bounce2"></div>
-          <div class="bounce3"></div>
+
+  <header>
+
+    <!-- TODO: make directive -->
+
+    <div id="preloader" style="display: none;">
+      <div id="status" style="display: none;">
+        <div class="spinner-wrap">
+          <div class="leftside"></div>
+          <div class="rightside"></div>
+          <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  
-  <!-- Fixed navbar -->
-  
-  <nav class="navbar main-menu navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-        <a class="navbar-brand" href="" title="logo">
-          <!--<img src="logo.png" alt="logo">-->
-          BLOG
-        </a> </div>
-      <div class="navbar-collapse collapse pull-left">
-        <ul class="nav navbar-nav menu" id="menu">         
-          <li><a href="">About Us</a></li>
-          <li><a href="">Contact</a></li>
-        </ul>
-      </div>
-      <ul class="nav navbar-nav navbar-right menu social-icons">
-        <li class="dropdown mega-dropdown search"> <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-search"></i></a>
-          <div class="dropdown-menu">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-6 pull-right">
-                  <div class="mega-dropdown-menu">
-                    <form class="search-form" action="">
-                      <div class="form-group">
-                        <div class="col-lg-12">
-                          <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search for..." ng-model="name">
-                            <span class="input-group-btn">
+
+    <!-- Fixed navbar -->
+
+    <nav class="navbar main-menu navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+          <a class="navbar-brand" href="" title="logo">
+            <!--<img src="logo.png" alt="logo">-->
+            BLOG
+          </a>
+        </div>
+        <div class="navbar-collapse collapse pull-left">
+          <ul class="nav navbar-nav menu" id="menu">
+            <li><a href="">About Us</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </div>
+        <ul class="nav navbar-nav navbar-right menu social-icons">
+          <li class="dropdown mega-dropdown search"> <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-search"></i></a>
+            <div class="dropdown-menu">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-6 pull-right">
+                    <div class="mega-dropdown-menu">
+                      <form class="search-form" action="">
+                        <div class="form-group">
+                          <div class="col-lg-12">
+                            <div class="input-group">
+                              <input type="text" class="form-control" placeholder="Search for..." ng-model="name">
+                              <span class="input-group-btn">
                             <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
                             </span> </div>
-                          <!-- /input-group --> 
-                          
+                            <!-- /input-group -->
+
+                          </div>
                         </div>
-                      </div>
-                    </form>
+                      </form>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </li>
-      </ul>
-      
-      <!--/.nav-collapse --> 
-      
-    </div>
-  </nav>
-</header>
-<section class="content">
-  <div class="container">
-    <h2 class="heading">Posts</h2>
-    <div class="row">
-      <div class="col-md-8 col-lg-8">
-        <ng-view></ng-view>
-        <div class="clearfix"></div>
+          </li>
+        </ul>
+
+        <!--/.nav-collapse -->
+
       </div>
-      <aside class="col-md-4 col-lg-4">
-        <div class="row">
-          <div class="col-sm-6 col-md-12 col-lg-12">
-            <div class="panel panel-default theme-panel">
-              <div class="panel-heading">Search Post</div>
-              <div class="panel-body">
-                <form action="" method="">
-                  <div class="input-group">
-                    <input type="text" class="form-control" ng-model="name" placeholder="Search for...">
-                    <span class="input-group-btn">
+    </nav>
+  </header>
+  <section class="content">
+    <div class="container">
+      <h2 class="heading">Posts</h2>
+      <div class="row">
+        <div class="col-md-8 col-lg-8">
+          <ng-view></ng-view>
+          <div class="clearfix"></div>
+        </div>
+        <aside class="col-md-4 col-lg-4">
+          <div class="row">
+            <div class="col-sm-6 col-md-12 col-lg-12">
+              <div class="panel panel-default theme-panel">
+                <div class="panel-heading">Search Post</div>
+                <div class="panel-body">
+                  <form action="" method="">
+                    <div class="input-group">
+                      <input type="text" class="form-control" ng-model="name" placeholder="Search for...">
+                      <span class="input-group-btn">
                     <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
                     </span> </div>
-                </form>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-12 col-lg-12">
+              <div class="panel panel-default theme-panel">
+                <div class="panel-heading">Tags</div>
+                <div class="panel-body">
+                  <ul class="list-inline tags">
+                    <li><a href="">LifeStyle</a></li>
+                    <li class="big"><a href="">Music</a></li>
+                    <li><a href="">SmartPhones</a></li>
+                    <li><a href="">Business</a></li>
+                    <li><a href="">Travel</a></li>
+                    <li class="big"><a href="">Business</a></li>
+                    <li class="small"><a href="">LifeStyle</a></li>
+                    <li><a href="">SmartPhones</a></li>
+                    <li><a href="">Fireworks</a></li>
+                    <li class="big"><a href="">Travel</a></li>
+                    <li><a href="">Fireworks</a></li>
+                    <li class="small"><a href="">Music</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-md-12 col-lg-12">
-            <div class="panel panel-default theme-panel">
-              <div class="panel-heading">Tags</div>
-              <div class="panel-body">
-                <ul class="list-inline tags">
-                  <li><a href="">LifeStyle</a></li>
-                  <li class="big"><a href="">Music</a></li>
-                  <li><a href="">SmartPhones</a></li>
-                  <li><a href="">Business</a></li>
-                  <li><a href="">Travel</a></li>
-                  <li class="big"><a href="">Business</a></li>
-                  <li class="small"><a href="">LifeStyle</a></li>
-                  <li><a href="">SmartPhones</a></li>
-                  <li><a href="">Fireworks</a></li>
-                  <li class="big"><a href="">Travel</a></li>
-                  <li><a href="">Fireworks</a></li>
-                  <li class="small"><a href="">Music</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+
+  <footer>
+    <div class="container">
+      <div class="row footer-bottom">
+        <div class="col-sm-7 footer-copyright">
+          <p>© Made with
+            <a href="">
+              <3</a>.</p>
         </div>
-      </aside>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-
-<footer>
-  <div class="container">
-    <div class="row footer-bottom">
-      <div class="col-sm-7 footer-copyright">
-        <p>© Made with <a href=""><3</a>.</p>
-      </div>
-      <div class="col-sm-5">
-        <ul class="list-inline footer-social">
-          <li><a class="facebook" target="_blank" href=""><i class="fa fa-facebook"></i></a></li>
-          <li><a class="twitter" target="_blank" href=""><i class="fa fa-twitter"></i></a></li>
-          <li><a class="google-plus" target="_blank" href=""><i class="fa fa-google-plus"></i></a></li>
-          <li><a class="behance" target="_blank" href=""><i class="fa fa-behance"></i></a></li>
-          <li><a class="tumblr" target="_blank" href=""><i class="fa fa-tumblr"></i></a></li>
-          <li><a class="pinterest" target="_blank" href=""><i class="fa fa-pinterest"></i></a></li>
-        </ul>
+        <div class="col-sm-5">
+          <ul class="list-inline footer-social">
+            <li><a class="facebook" target="_blank" href=""><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" target="_blank" href=""><i class="fa fa-twitter"></i></a></li>
+            <li><a class="google-plus" target="_blank" href=""><i class="fa fa-google-plus"></i></a></li>
+            <li><a class="behance" target="_blank" href=""><i class="fa fa-behance"></i></a></li>
+            <li><a class="tumblr" target="_blank" href=""><i class="fa fa-tumblr"></i></a></li>
+            <li><a class="pinterest" target="_blank" href=""><i class="fa fa-pinterest"></i></a></li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
- <!-- Library Scripts -->
-       <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-       <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-       <script src="/scripts/angular.js"></script>
-       <script src="scripts/angular-resource.js"></script>
-       <script src="/scripts/angular-route.js"></script>
-       <!-- Application Script -->
-       <script src="/app/app.js"></script>
-       <!-- Domain Classes -->
-       <script src="/app/domains/post.js"></script>
-       <!-- Services -->
-       <script src="/app/services/common.services.js"></script>
-       <script src="/app/services/dataPostServices.js"></script>
-       <script src="/app/factories/dataPostFactory.js"></script>
-       <!-- Controllers -->
-        <script src="app/controllers/PostListController.js"></script>
-         <!--Directives-->
-        <script src="/app/directives/ProgressBarDirective.js"></script>
+  </footer>
+  <!-- Library Scripts -->
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/scripts/angular.js"></script>
+  <script src="scripts/angular-resource.js"></script>
+  <script src="/scripts/angular-route.js"></script>
+  <!-- Application Script -->
+  <script src="/app/app.js"></script>
+  <!-- Domain Classes -->
+  <script src="/app/domains/post.js"></script>
+  <!-- Services -->
+  <script src="/app/services/common.services.js"></script>
+  <script src="/app/services/dataPostServices.js"></script>
+  <script src="/app/factories/dataPostFactory.js"></script>
+  <!-- Controllers -->
+  <script src="app/controllers/PostListController.js"></script>
+  <script src="app/controllers/PostViewController.js"></script>
+  <!--Directives-->
+  <script src="/app/directives/ProgressBarDirective.js"></script>
 
-</body></html>
+</body>
+
+</html>

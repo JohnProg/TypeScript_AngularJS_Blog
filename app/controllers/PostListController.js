@@ -23,6 +23,9 @@ var moduleFirstDemo;
         };
         PostListController.prototype.savePost = function () {
             var _this = this;
+            this.currentPost.publishDate = new Date();
+            this.currentPost.author = "John"; // TODO: should load from session :v
+            this.currentPost.likes = 0;
             this.DataPostFactory.savePost(this.currentPost).then(function (res) {
                 console.log('GRABE CHORRI');
                 console.log(res);

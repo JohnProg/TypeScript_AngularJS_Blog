@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-8 col-lg-8">
+            <article class="post">
+                <div class="post-type post-img">
+                    <a href="#"><img ng-src="{{ vm.post.imageUrl }}" class="img-responsive" alt="image post"></a>
+                </div>
+                <div class="author-info">
+                    <ul class="list-inline">
+                        <li>
+                            <div class="icon-box">
+                                <!--
+                                <img src="assets/images/post/author.png" class="img-responsive" alt="image post">
+                                -->
+                            </div>
+                            <div class="info">
+                                <p>Posted by:</p>
+                                <a href="">{{ vm.post.author}}</a> </div>
+                        </li>
+                        <li>
+                            <div class="icon-box"><i class="fa fa-calendar"></i></div>
+                            <div class="info">
+                                <p>Posted on:</p>
+                                <strong>{{ vm.post.publishDate | date }}</strong></div>
+                        </li>
+                        <li>
+                            <div class="icon-box"><i class="fa fa-comments-o"></i></div>
+                            <div class="info">
+                                <p>Comments:</p>
+                                <strong>127</strong></div>
+                        </li>
+                        <li>
+                            <div class="icon-box"><i class="fa fa-eye"></i></div>
+                            <div class="info">
+                                <p>Total View:</p>
+                                <strong>4289</strong></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="caption">
+                    <h3>{{ vm.post.postName }}</h3>
+                    <p> {{ vm.post.postDescription }}</p>
+                    <div class="post-category"> <a href="#"><span>&nbsp;</span> Market Research</a> </div>
+                    <ul class="list-inline tags">
+                        <li><a href="#">Photography</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Marketing</a></li>
+                        <li><a href="#">Business</a></li>
+                        <li><a href="#">Photoshop</a></li>
+                        <li><a href="#">LifeStyle</a></li>
+                    </ul>
+                    <a class="btn btn-default btn-lg" href="#/posts" role="button">Back</a> </div>
+            </article>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>

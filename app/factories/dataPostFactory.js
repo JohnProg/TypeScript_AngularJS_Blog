@@ -7,14 +7,21 @@ var moduleFirstDemo;
         }
         DataPostFactory.prototype.getPosts = function () {
             return this.$http
-                .get('http://192.168.0.149:3000/posts/')
+                .get('http://104.131.28.224:3000/posts/')
                 .then(function (response) {
                 return response.data;
             });
         };
         DataPostFactory.prototype.savePost = function (post) {
             return this.$http
-                .post('http://192.168.0.149:3000/posts/', post)
+                .post('http://104.131.28.224:3000/posts/', post)
+                .then(function (response) {
+                return response.data;
+            });
+        };
+        DataPostFactory.prototype.getPost = function (id) {
+            return this.$http
+                .get('http://104.131.28.224:3000/posts/' + id)
                 .then(function (response) {
                 return response.data;
             });

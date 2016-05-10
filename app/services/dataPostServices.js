@@ -8,7 +8,7 @@ var moduleFirstDemo;
                 this.$resource = $resource;
             }
             DataPostService.prototype.getPostResource = function () {
-                return this.$resource("http://192.168.0.149:3000/posts/:id");
+                return this.$resource("http://104.131.28.224:3000/posts/:id");
             };
             DataPostService.$inject = ['$resource'];
             return DataPostService;
