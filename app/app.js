@@ -6,9 +6,9 @@ var moduleFirstDemo;
     function demoRouteConfig($routeProvider) {
         $routeProvider.when('/inicio', {
             templateUrl: 'app/views/inicio.html'
-        }).when('/products', {
-            templateUrl: 'app/views/productList.html',
-            controller: 'ProductListController',
+        }).when('/posts', {
+            templateUrl: 'app/views/postList.html',
+            controller: 'PostListController',
             controllerAs: 'vm'
         }).when('/acerca', {
             templateUrl: 'app/views/acerca.html'

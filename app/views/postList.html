@@ -24,21 +24,21 @@
             </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="product in vm.products">
+            <tr ng-repeat="post in vm.posts">
                 <td>
                     <img ng-if="vm.showImage"
-                         ng-src="{{product.imageUrl}}"
+                         ng-src="{{post.imageUrl}}"
                          style="width:50px;margin:2px"
-                         title="{{product.productName}}">
+                         title="{{post.postName}}">
                 </td>
-                <td>{{ product.productName}} </td>
-                <td>{{ product.productCode }}</td>
-                <td>{{ product.releaseDate | date }}</td>
-                <td>{{ product.price | currency }}</td>
+                <td>{{ post.postName}} </td>
+                <td>{{ post.postCode }}</td>
+                <td>{{ post.publishDate | date }}</td>
+                <td>{{ post.price | currency }}</td>
                 <td><button class="btn btn-success"
                             data-toggle="modal" 
                             data-target="#myModal"
-                            ng-click="vm.currentProduct = product">detalle</button></td>
+                            ng-click="vm.currentPost = product">detalle</button></td>
             </tr>
             </tbody>
         </table>
@@ -55,12 +55,12 @@
             <div class="row">
                 <div class="col-sm-4">
                     <img class="img-responsive"
-                        ng-src="{{ vm.currentProduct.imageUrl}}" alt="">
+                        ng-src="{{ vm.currentPost.imageUrl}}" alt="">
                 </div>
                 <div class="col-sm-8">
-                    <p><b>Name: </b>{{ vm.currentProduct.productName }}</p>
-                    <p><b>Code: </b>{{ vm.currentProduct.productCode }}</p>
-                    <p><b>Price: </b>: {{ vm.currentProduct.price }}</p>
+                    <p><b>Name: </b>{{ vm.currentPost.productName }}</p>
+                    <p><b>Code: </b>{{ vm.currentPost.productCode }}</p>
+                    <p><b>Price: </b>: {{ vm.currentPost.price }}</p>
                 </div>
             </div>
             

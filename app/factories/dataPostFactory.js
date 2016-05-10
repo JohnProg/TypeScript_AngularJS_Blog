@@ -1,26 +1,26 @@
 var moduleFirstDemo;
 (function (moduleFirstDemo) {
     'use strict';
-    var DataProductFactory = (function () {
-        function DataProductFactory($http) {
+    var DataPostFactory = (function () {
+        function DataPostFactory($http) {
             this.$http = $http;
         }
-        DataProductFactory.prototype.getProducts = function () {
+        DataPostFactory.prototype.getPosts = function () {
             return this.$http
                 .get('http://192.168.0.149:3000/products/')
                 .then(function (response) {
                 return response.data;
             });
         };
-        DataProductFactory.$inject = ['$http'];
-        return DataProductFactory;
+        DataPostFactory.$inject = ['$http'];
+        return DataPostFactory;
     }());
-    moduleFirstDemo.DataProductFactory = DataProductFactory;
+    moduleFirstDemo.DataPostFactory = DataPostFactory;
     function factory($http) {
-        return new DataProductFactory($http);
+        return new DataPostFactory($http);
     }
     angular
         .module('demoModule')
-        .factory('DataProductFactory', factory);
+        .factory('DataPostFactory', factory);
 })(moduleFirstDemo || (moduleFirstDemo = {}));
-//# sourceMappingURL=dataProductFactory.js.map
+//# sourceMappingURL=dataPostFactory.js.map
