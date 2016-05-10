@@ -16,7 +16,7 @@ var moduleFirstDemo;
                     _this.posts = res;
                     _this.showProgress = false;
                 });
-            }, 2000);
+            }, 0);
         }
         PostListController.prototype.toggleImage = function () {
             this.showImage = !this.showImage;

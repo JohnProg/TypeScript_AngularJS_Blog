@@ -30,7 +30,7 @@ namespace moduleFirstDemo {
                     this.showProgress=false;
                 }
             );
-            }, 2000);
+            }, 0);
         }
         toggleImage():void{
             this.showImage=!this.showImage;
