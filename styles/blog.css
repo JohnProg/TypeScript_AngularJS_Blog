@@ -67,7 +67,7 @@ textarea.form-control {height: auto;min-height: 200px;}
 .back-to-top:hover { background:#363636; color:#fff; }
 /******************section default**********************/
 
-section h2.heading { font-size:30px; color:#3b4952; font-family: 'Roboto', sans-serif; font-weight:300; line-height:30px; margin-bottom:45px; border-bottom: 5px solid #e74c3c; margin-top: 0px; padding-bottom: 15px;}
+section h2.heading { font-size:30px; color:#3b4952; font-family: 'Roboto', sans-serif; font-weight:300; line-height:30px; margin-bottom:35px; border-bottom: 5px solid #e74c3c; margin-top: 0px; padding-bottom: 15px;}
 section h3.helping-text { font-size:20px; color:#454545; font-weight:300; margin:0px 0px 30px 0px; line-height:36px; }
 section p { font-size:18px; color:#454545; }
 section { padding:0px 0px; }
@@ -378,7 +378,8 @@ a.list-group-item { color: #49545b; padding:15px 25px; border-color: #eef3f6; fo
 .form-control.error{ margin-top: 0px;}
 /**************************footer*********************************/
 
-footer { padding:15px 0px; background:#222; width:100%; float:left; }
+footer { padding:15px 0px; background:#222; width:100%; float:left;     bottom: 0;
+    position: fixed;}
 footer p{ color: #fff;
 font-size: 16px;
 font-weight: 300;
@@ -730,4 +731,8 @@ a.blogger { color: #f39d38; }
   right: 0;
   left: -79px;
 }
+}
+
+.mbottom-10 {
+  margin-bottom: 10px;
 }

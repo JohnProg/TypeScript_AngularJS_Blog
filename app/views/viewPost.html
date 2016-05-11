@@ -1,5 +1,5 @@
 <div class="col-md-9 col-lg-9">
-    <a class="btn btn-default pull-left btn-lg"
+    <a class="btn btn-default pull-left btn-lg mbottom-10"
                href="#/posts"
                role="button">Back</a>        
     <article class="post">        
@@ -27,7 +27,7 @@
                     <div class="icon-box"><i class="fa fa-comments-o"></i></div>
                     <div class="info">
                         <p>Comments:</p>
-                        <strong>127</strong>
+                        <strong>{{ vm.post.comments.length }}</strong>
                     </div>
                 </li>
                 <li>
@@ -273,6 +273,7 @@
                                 <input type="text" 
                                        class="form-control" 
                                        name="author" 
+                                       required
                                        autofocus
                                        ng-model="vm.comment.author"
                                        autocomplete="off"
@@ -284,6 +285,7 @@
 
                         <textarea class="form-control" 
                                  name="message" 
+                                 required
                                  ng-model="vm.comment.body"
                                  placeholder="Message:" 
                                  rows="3"></textarea>

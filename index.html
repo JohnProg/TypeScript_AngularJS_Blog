@@ -11,7 +11,7 @@
   <title>Blog Typescript | Home one</title>
 
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
   <link rel="stylesheet" href="styles/blog.css" type="text/css">
   <link rel="stylesheet" href="styles/font-awesome.css">
 
@@ -23,7 +23,73 @@
 
 <body ng-app="demoModule">
 
-  <ng-include src="'app/views/partials/header.html'"></ng-include>
+  <!--<ng-include src="'app/views/partials/header.html'"
+              ng-controller="PostListController"></ng-include>-->
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar main-menu navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" 
+                  data-toggle="collapse" 
+                  data-target=".navbar-collapse"> 
+                  <span class="sr-only">Toggle navigation</span> 
+                  <span class="icon-bar"></span> 
+                  <span class="icon-bar"></span> 
+                  <span class="icon-bar"></span> 
+            </button>
+          <a class="navbar-brand" 
+             style="color: white;top: 15px;position: relative;" 
+             href="#/" 
+             title="logo">
+            <!--<img src="logo.png" alt="logo">-->
+            BLOG
+          </a>
+        </div>
+        <!--<div class="navbar-collapse collapse pull-left">
+          <ul class="nav navbar-nav menu" id="menu">
+            <li><a href="">About Us</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </div>-->
+        <ul class="nav navbar-nav navbar-right menu social-icons">
+          <li class="dropdown mega-dropdown search"> 
+            <a href="" class="dropdown-toggle" 
+                       data-toggle="dropdown" 
+                       role="button" 
+                       aria-expanded="false"><i class="fa fa-search"></i></a>
+            <div class="dropdown-menu">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-6 pull-right">
+                    <div class="mega-dropdown-menu">
+                      <form class="search-form">
+                        <div class="form-group">
+                          <div class="col-lg-12">
+                            <div class="input-group">
+                              <input type="text" 
+                                     class="form-control" 
+                                     placeholder="Search for..." 
+                                     ng-model="name">
+                              <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+                            </span> </div>
+                            <!-- /input-group -->
+
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <!--/.nav-collapse -->
+      </div>
+    </nav>
+</header>
   
   <section class="content">
     <div class="container">

@@ -13,7 +13,7 @@ var moduleFirstDemo;
             this.showProgress = true;
             setTimeout(function () {
                 _this.DataPostFactory.getPosts().then(function (res) {
-                    _this.posts = res;
+                    _this.posts = res.reverse();
                     _this.showProgress = false;
                 });
             }, 0);

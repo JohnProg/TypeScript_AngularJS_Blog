@@ -19,14 +19,14 @@ namespace moduleFirstDemo {
         constructor(private DataPostService: moduleFirstDemo.common.IDataPostService,
         private DataPostFactory: moduleFirstDemo.IDataPostFactory, private $location: ng.ILocationService){
             this.title="Product list";
-            this.showImage=false;
-            this.posts=[];
-            this.showProgress=true;
+            this.showImage = false;
+            this.posts = [];
+            this.showProgress = true;
             setTimeout(()=> {
                 this.DataPostFactory.getPosts().then(
                 res=>{
-                    this.posts=res;
-                    this.showProgress=false;
+                    this.posts = res.reverse();
+                    this.showProgress = false;
                 }
             );
             }, 0);

@@ -37,7 +37,7 @@ namespace moduleFirstDemo {
         }
         getComments(): void {      
             this.DataPostFactory.getComments(this.postId).then(res => {
-                this.post.comments = res;
+                this.post.comments = res.reverse();
             });
         }
         saveComment(): void {

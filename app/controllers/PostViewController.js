@@ -24,7 +24,7 @@ var moduleFirstDemo;
         PostViewController.prototype.getComments = function () {
             var _this = this;
             this.DataPostFactory.getComments(this.postId).then(function (res) {
-                _this.post.comments = res;
+                _this.post.comments = res.reverse();
             });
         };
         PostViewController.prototype.saveComment = function () {
