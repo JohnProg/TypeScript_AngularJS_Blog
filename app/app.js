@@ -16,8 +16,14 @@ var moduleFirstDemo;
             templateUrl: 'app/views/viewPost.html',
             controller: 'PostViewController',
             controllerAs: 'vm'
+        }).when('/admin/posts/:id', {
+            templateUrl: 'app/views/viewPost.html',
+            controller: 'PostViewController',
+            controllerAs: 'vm'
         }).when('/acerca', {
             templateUrl: 'app/views/acerca.html'
+        }).when('/admin/posts', {
+            templateUrl: 'app/views/admin/postList.html'
         }).otherwise('/');
     }
 })(moduleFirstDemo || (moduleFirstDemo = {}));

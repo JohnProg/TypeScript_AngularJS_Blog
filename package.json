@@ -12,5 +12,8 @@
     "bootstrap": "^3.3.6",
     "http-server": "^0.9.0",
     "jquery": "^2.2.3"
+  },
+  "devDependencies": {
+    "angular-ui-tinymce": "0.0.15"
   }
 }

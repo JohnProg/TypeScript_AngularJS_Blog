@@ -7,6 +7,7 @@ namespace moduleFirstDemo {
         getPost: (id: number) => ng.IPromise<moduleFirstDemo.domain.IPost>;
         getComments: (id: number) => ng.IPromise<moduleFirstDemo.domain.IComment[]>;
         saveComment: (comment: moduleFirstDemo.domain.IComment) => ng.IPromise<moduleFirstDemo.domain.IComment>;
+        deletePost: (id: number) => ng.IPromise<any>;
     }
     export class DataPostFactory implements IDataPostFactory {
         static $inject: Array<string> = ['$http'];
@@ -55,6 +56,13 @@ namespace moduleFirstDemo {
                 .post('http://104.131.28.224:3000/comments/', comment)
                 .then((response: ng.IHttpPromiseCallbackArg<moduleFirstDemo.domain.IComment>): moduleFirstDemo.domain.IComment => {
                     return <moduleFirstDemo.domain.IComment>response.data;
+                });
+        }
+        deletePost(id: number): ng.IPromise<any> {
+            return this.$http
+                .delete('http://104.131.28.224:3000/posts/' + id)
+                .then((response: ng.IHttpPromiseCallbackArg<any>): any => {
+                    return <any>response.data;
                 });
         }
     }
