@@ -6,6 +6,7 @@ namespace moduleFirstDemo {
         posts:moduleFirstDemo.domain.IPost[];
         currentPost: moduleFirstDemo.domain.IPost;
         savePost():void;
+        deletePost(index: number):void;
     }
     export class PostListController implements IPostListController{
        static $inject: Array<string> = ['DataPostService','DataPostFactory','$location'];
@@ -38,6 +39,15 @@ namespace moduleFirstDemo {
             
             this.DataPostFactory.savePost(this.currentPost).then(res => {
                 this.$location.path('/posts');
+            });
+        }
+        deletePost(index: number): void {
+            console.log('WTF ' + index);
+            var id = this.posts[index]['id'];
+            console.log('ID',this.posts);
+            
+            this.DataPostFactory.deletePost(id).then(res => {
+               this.posts.splice(index, 1); 
             });
         }
     }

@@ -27,6 +27,15 @@ var moduleFirstDemo;
                 _this.$location.path('/posts');
             });
         };
+        PostListController.prototype.deletePost = function (index) {
+            var _this = this;
+            console.log('WTF ' + index);
+            var id = this.posts[index]['id'];
+            console.log('ID', this.posts);
+            this.DataPostFactory.deletePost(id).then(function (res) {
+                _this.posts.splice(index, 1);
+            });
+        };
         PostListController.$inject = ['DataPostService', 'DataPostFactory', '$location'];
         return PostListController;
     }());

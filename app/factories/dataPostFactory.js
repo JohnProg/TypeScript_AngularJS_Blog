@@ -47,6 +47,13 @@ var moduleFirstDemo;
                 return response.data;
             });
         };
+        DataPostFactory.prototype.deletePost = function (id) {
+            return this.$http
+                .delete('http://104.131.28.224:3000/posts/' + id)
+                .then(function (response) {
+                return response.data;
+            });
+        };
         DataPostFactory.$inject = ['$http'];
         return DataPostFactory;
     }());
