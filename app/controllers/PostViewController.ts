@@ -51,6 +51,10 @@ namespace moduleFirstDemo {
             });
         }
         
+        load(): void {
+            alert();
+        }
+        
     }
 
     angular

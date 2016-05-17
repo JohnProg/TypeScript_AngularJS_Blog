@@ -1,7 +1,7 @@
 var moduleFirstDemo;
 (function (moduleFirstDemo) {
     'user strict';
-    var demoModule = angular.module('demoModule', ['ngRoute', 'common.services']);
+    var demoModule = angular.module('demoModule', ['ngRoute', 'common.services', 'ngSanitize']);
     demoModule.config(demoRouteConfig);
     function demoRouteConfig($routeProvider) {
         $routeProvider.when('/', {

@@ -95,7 +95,9 @@
     <div class="container">
       <h2 class="heading">Posts</h2>
       <div class="row">
-        <ng-view></ng-view>        
+        <ng-view></ng-view> 
+        <br>
+        <br>
       </div>
     </div>
   </section>
@@ -106,6 +108,7 @@
   <script src="scripts/jquery.min.js"></script>
   <script src="scripts/bootstrap.min.js"></script>
   <script src="/scripts/angular.js"></script>
+  <script src="/node_modules/angular-sanitize/angular-sanitize.js"></script>
   <script src="scripts/angular-resource.js"></script>
   <script src="/scripts/angular-route.js"></script>
   <!-- Application Script -->
@@ -121,7 +124,9 @@
   <script src="app/controllers/PostViewController.js"></script>
   <!--Directives-->
   <script src="/app/directives/ProgressBarDirective.js"></script>
+  <script src="/app/directives/FocusInput.js"></script>
 
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.0.1/ckeditor.js"></script>
 </body>
 
 </html>

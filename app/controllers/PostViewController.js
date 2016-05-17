@@ -37,6 +37,9 @@ var moduleFirstDemo;
                 //this.$location.path('/posts');
             });
         };
+        PostViewController.prototype.load = function () {
+            alert();
+        };
         PostViewController.$inject = ['DataPostFactory', '$location', '$routeParams'];
         return PostViewController;
     }());

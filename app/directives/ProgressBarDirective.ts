@@ -33,5 +33,5 @@ namespace moduleFirstDemo{
         }
     }
       angular.module('demoModule')
-    .directive('progressBar',Progressbar.instance);
+    .directive('progressBar', Progressbar.instance);
 }

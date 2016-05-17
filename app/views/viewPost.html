@@ -50,8 +50,8 @@
         </div>
         <div class="caption">
             <h3>{{ vm.post.postName }}</h3>
-
-            <p> {{ vm.post.postDescription }}</p>
+            <section ng-bind-html="vm.post.postDescription"></section>
+        
 
             <div class="post-category">
                 <a href="#"><span>&nbsp;</span> Market Research</a>
