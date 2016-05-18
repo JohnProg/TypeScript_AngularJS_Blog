@@ -23,8 +23,9 @@ var moduleFirstDemo;
             this.currentPost.publishDate = new Date();
             this.currentPost.author = "John"; // TODO: should load from session :v
             this.currentPost.likes = 0;
-            if (CKEDITOR) {
-                this.currentPost.postDescription = CKEDITOR["instances"]["editor"].getData();
+            this.currentPost.tags = ["js", "html", "ionic"];
+            if (tinyMCE) {
+                this.currentPost.postDescription = tinyMCE.activeEditor.getContent();
             }
             this.DataPostFactory.savePost(this.currentPost).then(function (res) {
                 _this.$location.path('/posts');

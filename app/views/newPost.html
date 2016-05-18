@@ -1,8 +1,24 @@
-
+  <script src="http://cdn.tinymce.com/4/tinymce.min.js"></script>
 <script>
-  CKEDITOR.replace( 'editor' );
+  setTimeout(function() {
+    tinymce.init({
+    selector: '#postDescription',
+    mode : "specific_textareas",
+    toolbar1: " undo redo | styleselect | bold italic charmap underline strikethrough | hr | alignleft aligncenter alignright alignjustify | bullist numlist | indent outdent | link unlink image | table removeformat print fullscreen preview  media | forecolor backcolor emoticons",
+        plugins: [
+            "hr lists link image charmap print preview anchor",
+            "fullscreen",
+            "media table contextmenu paste imagetools emoticons textcolor colorpicker textpattern"
+        ],
+        menubar: true,
+        default_link_target: "_blank",
+        statusbar: true,
+        image_advtab: true,
+        relative_urls: false,
+        remove_script_host: false
+    });
+  }, 1000);
 </script>
-
 <form class="form-horizontal"
       name="formCreatePost">
   <div class="form-group">
@@ -21,11 +37,20 @@
     </div>
   </div>
   <div class="form-group">
+    <label for="postShortDescription" 
+           class="col-sm-2 control-label">Description corta</label>
+    <div class="col-sm-10">
+      <textarea class="form-control"
+                id="postShortDescription" style="min-height: 100px;resize:vertical ;" data-ng-model="vm.currentPost.postShortDescription"></textarea>
+      </textarea>
+    </div>
+  </div>
+  <div class="form-group">
     <label for="postDescription" 
            class="col-sm-2 control-label">Description</label>
     <div class="col-sm-10">
       <textarea class="form-control"
-                name="editor" id="" cols="30" rows="10" data-ng-model="vm.currentPost.postDescription"></textarea>
+                id="postDescription" cols="30" rows="10" data-ng-model="vm.currentPost.postDescription"></textarea>
       </textarea>
     </div>
   </div>
