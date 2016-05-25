@@ -16,6 +16,6 @@ var moduleFirstDemo;
         };
     }
     moduleFirstDemo.StoreSearch = StoreSearch;
-    angular.module("mallApp").filter("storeSearch", StoreSearch);
+    angular.module("demoModule").filter("storeSearch", StoreSearch);
 })(moduleFirstDemo || (moduleFirstDemo = {}));
 //# sourceMappingURL=tagFilter.js.map

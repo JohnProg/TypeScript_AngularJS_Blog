@@ -14,5 +14,5 @@ module moduleFirstDemo {
             return filtered;
         }
     }
-    angular.module("mallApp").filter("storeSearch", StoreSearch);
+    angular.module("demoModule").filter("storeSearch", StoreSearch);
 }

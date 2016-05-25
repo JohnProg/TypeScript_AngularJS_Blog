@@ -11,9 +11,8 @@
   <title>Blog Typescript | Home one</title>
 
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="styles/bootstrap.min.css">
-  <link rel="stylesheet" href="styles/blog.css" type="text/css">
-  <link rel="stylesheet" href="styles/font-awesome.css">
+  <link rel="stylesheet" href="out/stylesheets/plugins.min.css">
+  <link rel="stylesheet" href="out/stylesheets/app.min.css" type="text/css">
 
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -39,8 +38,7 @@
                   <span class="icon-bar"></span> 
                   <span class="icon-bar"></span> 
             </button>
-          <a class="navbar-brand" 
-             style="color: white;top: 15px;position: relative;" 
+          <a class="navbar-brand"  
              href="#/" 
              title="logo">
             <!--<img src="logo.png" alt="logo">-->
@@ -112,27 +110,9 @@
   <!-- Footer-->
   <ng-include src="'app/views/partials/footer.html'"></ng-include>
   <!-- Library Scripts -->
-  <script src="scripts/jquery.min.js"></script>
-  <script src="scripts/bootstrap.min.js"></script>
-  <script src="/scripts/angular.js"></script>
-  <script src="/node_modules/angular-sanitize/angular-sanitize.js"></script>
-  <script src="scripts/angular-resource.js"></script>
-  <script src="/scripts/angular-route.js"></script>
+  <script src="out/javascript/plugins.min.js"></script>
   <!-- Application Script -->
-  <script src="/app/app.js"></script>
-  <!-- Domain Classes -->
-  <script src="/app/domains/post.js"></script>
-  <!-- Services -->
-  <script src="/app/services/common.services.js"></script>
-  <script src="/app/services/dataPostServices.js"></script>
-  <script src="/app/factories/dataPostFactory.js"></script>
-  <!-- Controllers -->
-  <script src="app/controllers/PostListController.js"></script>
-  <script src="app/controllers/PostViewController.js"></script>
-  <!--Directives-->
-  <script src="/app/directives/ProgressBarDirective.js"></script>
-  <script src="/app/directives/FocusInput.js"></script>
-
+  <script src="out/javascript/bundle.min.js"></script>
 </body>
 
 </html>

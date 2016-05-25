@@ -722,6 +722,7 @@ a.blogger { color: #f39d38; }
 }
 .navbar-brand {
   padding: 20px 0px;
+  color: white;top: 15px;position: relative;
 }
 .navbar-default .navbar-nav .mega-dropdown .container {
   padding: 0px;

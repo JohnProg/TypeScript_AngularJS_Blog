@@ -1,38 +1,43 @@
 namespace moduleFirstDemo {
     'use strict';
-    export interface IPostListController{
-        title:string;
-        showImage:boolean;
-        posts:moduleFirstDemo.domain.IPost[];
+    export interface IPostListController {
+        title: string;
+        showImage: boolean;
+        posts: moduleFirstDemo.domain.IPost[];
         currentPost: moduleFirstDemo.domain.IPost;
-        savePost():void;
-        deletePost(index: number):void;
+        savePost(): void;
+        loadEditor(): void;
+        deletePost(index: number): void;
     }
-    export class PostListController implements IPostListController{
-       static $inject: Array<string> = ['DataPostService','DataPostFactory','$location'];
+    export class PostListController implements IPostListController {
+        static $inject: Array<string> = ["$scope", 'DataPostService', 'DataPostFactory', '$location'];
         //constructor(private dependency1: dependency1Type) {}
-        title:string;
-        showImage:boolean;
-        posts:moduleFirstDemo.domain.IPost[];
+        title: string;
+        showImage: boolean;
+        posts: moduleFirstDemo.domain.IPost[];
         currentPost: moduleFirstDemo.domain.IPost;
-        showProgress:boolean;
-        
-        constructor(private DataPostService: moduleFirstDemo.common.IDataPostService,
-        private DataPostFactory: moduleFirstDemo.IDataPostFactory, private $location: ng.ILocationService){
-            this.title="Product list";
+        showProgress: boolean;
+
+        constructor(private $scope: ng.IScope, private DataPostService: moduleFirstDemo.common.IDataPostService,
+            private DataPostFactory: moduleFirstDemo.IDataPostFactory, private $location: ng.ILocationService) {
+            this.title = "Product list";
             this.showImage = false;
             this.posts = [];
             this.showProgress = true;
-            setTimeout(()=> {
-                this.DataPostFactory.getPosts().then(
-                res=>{
-                    this.posts = res.reverse();
-                    this.showProgress = false;
-                }
-            );
-            }, 0);
+
+            if ($location.path() == "/") {
+                setTimeout(() => {
+                    this.DataPostFactory.getPosts().then(
+                        res => {
+                            this.posts = res.reverse();
+                            this.showProgress = false;
+                        }
+                    );
+                }, 0);
+            }
+            
         }
-        
+
 
         savePost(): void {
             this.currentPost.publishDate = new Date();
@@ -46,14 +51,21 @@ namespace moduleFirstDemo {
                 this.$location.path('/posts');
             });
         }
+
         deletePost(index: number): void {
             console.log('WTF ' + index);
             var id = this.posts[index]['id'];
-            console.log('ID',this.posts);
-            
+            console.log('ID', this.posts);
+
             this.DataPostFactory.deletePost(id).then(res => {
-               this.posts.splice(index, 1); 
+                this.posts.splice(index, 1);
             });
+        }
+
+        loadEditor(): void {
+            setTimeout(() => {
+                this.$scope.$apply(() => this.showProgress = false);
+            }, 4000);
         }
     }
 

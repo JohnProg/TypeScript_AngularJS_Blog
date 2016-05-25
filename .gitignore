@@ -56,4 +56,5 @@ docs/_build/
 *.iml
 node_modules/
 media/
-node_js/
+gulpfile.js
+firebase.json
